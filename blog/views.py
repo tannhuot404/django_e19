@@ -1,6 +1,16 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
+def index(request):
+    context = {
+        'username': 'SuperCoder99', 
+        'age': 25, 
+        'is_premium': True,
+        'movies': ['movie1', 'movie2']
+    }
+     
+    return render(request, "blog/index.html", context)
+
 def welcome_view(request):
     return HttpResponse("<h1>Welcom to Django App</h1>")
 
