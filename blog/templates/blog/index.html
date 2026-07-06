@@ -1,5 +1,13 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
+
+{% load static %} 
+
+{% block 'customCSS' %}
+<link rel="stylesheet" href="{% static 'blog/myStyle.css' %}" />
+<link rel="stylesheet" href="{% static 'myStyle.css' %}" />
+{% endblock 'customCSS' %} 
 
 {% block 'mainContent' %}
-<p>My Content</p>
+<p class="myP">My Content</p>
+<img src="{% static 'blog/logo.jpg' %}" alt="" />
 {% endblock 'mainContent' %}
